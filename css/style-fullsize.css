@@ -1,0 +1,336 @@
+html, body {
+  /*margin: 20px;*/
+  font-family: 'Helvetica', sans-serif;
+  background-color: #F7F7F7;
+  /*background-color: #FF7256;*/
+  color: #444444;
+}
+
+a {
+	color: #444444;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FF1111;
+}
+
+.active {
+	color: #FF1111;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1025px) {
+
+	.container {
+		font-family: 'Helvetica', sans-serif;
+		margin: 0 auto;
+		width: 80%;
+		height: 100%;
+		background-color: #F7F7F7;
+	}
+
+	.header {
+		margin: 0 auto;
+		width: 100%;
+		position: relative;
+		height: 100px;
+	}
+
+	.header h1 {
+		float: left;
+		width: 70%;
+	}
+
+	#cursive {
+		font-family: 'Rock Salt', cursive;
+		font-size: 30px;
+		border: 3px solid #444444;
+		padding: 0 5px 0 5px;
+		text-decoration: none;
+	}
+
+	.header h1 .active{
+		color: #444444;
+	}
+
+	.header h1 a:hover {
+		color: #444444;
+	}
+
+	.nav-box {
+		float: right;
+		margin-top: 16px;
+		height: 60px;
+		padding: 10px 0 0 0;
+		width: 180px;
+	}
+
+	.nav-box li {
+		list-style-type: none;
+		display: inline;
+		margin: 10px;
+	}
+
+	.nav-item li a {
+		text-decoration: none;	
+	}
+
+	.content {
+		font-family: 'Helvetica', sans-serif;
+		padding: 0px;
+		color: #444444;
+	}
+
+
+	/*********************************/
+	/*Index Template CSS*/
+	/*********************************/
+	.index-template {
+		text-align: left;
+		position: relative;
+	}
+
+	.message {
+		position: relative;
+		color: #FF1111;
+		margin: 0 auto;
+		width: 50%;
+		height: 455;
+		padding-top: 1px;
+	}
+
+	.index-template h1 {
+		text-align: left;
+		line-height: 90px;
+		margin: 0px;
+	}
+
+	#line1 {
+		padding-top: 5px;
+		padding-left: 3px;
+		font-size: 120px;
+		letter-spacing: 35px;
+		line-height: 108px;
+	}
+
+	#line2 {
+		margin: 0px 0px 0px 0px;
+		padding-left: 10px;
+		font-family: 'Rock Salt', cursive;
+		font-size: 15px;
+		line-height: 25px;
+		letter-spacing: 3px;
+		
+	}
+
+	#line3 {
+		font-size: 80px;
+		margin: 0px;
+		padding-left: 5px;
+	}
+
+	#line4 {
+		margin: 0px 0px 0px 0px;
+		padding-left: 10px;
+		font-family: 'Rock Salt', cursive;
+		font-size: 15px;
+		line-height: 25px;
+		letter-spacing: 2px;	
+	}
+
+	#line5 {
+		font-size: 56px;
+		letter-spacing: 4px;
+		margin: 0px;
+		padding-left: 6px;
+		line-height: 72px;
+	}
+
+	#line6 {
+		margin: 0px 0px 0px 0px;
+		padding-left: 10px;
+		font-family: 'Rock Salt', cursive;
+		font-size: 16px;
+		line-height: 25px;
+		letter-spacing: 3px;
+		
+	}
+
+	#line7 {
+		font-size: 103px;
+		letter-spacing: 12px;
+		margin: 0px;
+		padding-left: 7px;
+		line-height: 118px;
+	}
+
+
+	/*********************************/
+	/*About Template CSS*/
+	/*********************************/
+	.about-template {
+		height: 520px;
+		padding-top: 20px;
+	}
+
+	.status-header {
+		height: 100px;
+		text-align: center;
+		margin: 10px 0px 0px 0px;	
+	}
+
+	.status-header i {
+		margin-right: 10px;
+	}
+
+	#status-span1 {
+		font-family: 'Helvetica';
+		font-size: 60px;
+		font-weight: 100;
+	}
+
+	#status-span2 {
+		font-family: 'Rock Salt', cursive;
+		font-size: 40px;
+		font-weight: 100;
+		letter-spacing: 4px;
+		color: #FF1111;
+	}
+
+	/*Column 1 - About Me*/
+	.bio {
+		margin: 0 auto;
+		width: 33%;
+		float: left;
+		text-align: center;
+	}
+
+	#headshot {
+		margin-right: 10px;
+	}
+
+	#headshot img {
+		height: 100px;
+		width: 100px;
+		border-radius: 100%;
+	}
+
+	.bio-intro p {
+		margin-top: 0px;
+		padding: 10px 0px 0px 10px;
+		text-align: left;
+		font-family: 'Helvetica';
+		font-weight: 300;
+		line-height: 16pt;
+	}
+
+	/*Column 2 - Skills*/
+	.skills {
+		margin: 0 auto;
+		width: 33%;
+		padding-top: 10px;
+		height: 400px;
+		float: left;
+		text-align: center;
+	}
+
+	#code-icon {
+		margin-bottom: 20px;
+	}
+
+	.skill-list p{
+		margin: 0px;
+		font-family: 'Rock Salt', cursive;
+		font-size: 20px;
+		font-weight: 100;
+		line-height: 40px;
+		letter-spacing: 4px;
+	}
+
+	/*Column 3 - Contact info*/
+	.contact-info {
+		margin: 0 auto;
+		width: 33%;
+		height: 400px;
+		float: left;
+		text-align: center;
+	}
+
+	.contact-header {
+		font-family: 'Rock Salt', cursive;
+		font-size: 25px;
+		font-weight: 100;
+		letter-spacing: 4px;
+	}
+
+	.icons-container {
+		margin: 0 auto;
+		width: 60%;
+	}
+
+	.contact-icon {
+		margin: 0 auto;
+		width: 45%;
+		float: left;
+	}
+
+
+	/*********************************/
+	/*Blog Template CSS*/
+	/*********************************/
+	.blog-container {
+		width: 75%;
+		margin: 0 auto;
+		padding-bottom: 3%;
+	}
+
+	.date {
+		margin: 0 auto;
+	}
+
+	.date p {
+		font-family: 'Helvetica';
+		font-weight: 100;
+	}
+
+	.text {
+		margin: 0 auto;
+		width: 100%;
+		
+	}
+
+	.title h3 {
+		margin: 5px 0 5px 0;
+		font-family: 'Helvetica';
+		font-size: 30px;
+		font-weight: 100;
+	}
+
+	.blog-body {
+		font-family: 'Helvetica';
+		font-weight: 300;
+		line-height: 16pt;
+		width: 100%;
+	}
+
+	.blog-body p img {
+			margin: 0 auto;
+			padding-left: 19%;
+			padding-right: 19%;
+	}
+
+	/*********************************/
+	/*Footer*/
+	/*********************************/
+	.footer {
+	  padding-top: 30px;
+
+	}
+	.footer p{
+		font-family: 'Helvetica';
+		font-weight: 400;
+		font-size: 12px;
+	}
+}

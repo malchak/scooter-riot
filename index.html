@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Michael Malchak - Web Developer</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style-fullsize.css">
+  <link rel="stylesheet" href="css/style-tablet.css">
+  <link rel="stylesheet" href="css/style-mobile.css">
+</head>
+<body>
+  <!-- Application Template -->
+  <script type="text/x-handlebars">
+    <div class="container">
+      <div class="header">
+        <h1>{{#linkTo 'index'}}<span id="cursive">M/M</span>{{/linkTo}}</h1>
+        <ul class="nav-box">
+          <li class="nav-item">
+            {{#linkTo 'index'}}<i class="icon-home icon-3x"></i>{{/linkTo}}
+          </li>
+          <li class="nav-item">
+            {{#linkTo 'about'}}<i class="icon-user icon-3x"></i>{{/linkTo}}
+          </li>
+          <li class="nav-item">
+            {{#linkTo 'posts'}}<i class="icon-tumblr icon-3x"></i>{{/linkTo}}
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        {{outlet}}
+      </div>
+      <div class="footer">
+        <p>{{fullName}} / {{title}}<p>
+      </div>
+    </div>
+  </script>
+  <!-- Main Outlet Templates -->
+  <!-- Index -->
+  <script type="text/x-handlebars" data-template-name="index">
+    <div class="index-template">
+      <div class="message">
+        <h1 id="line1">MAKE</h1>
+          <p id="line2">It is <span>{{time}}</span> on {{today}}</p>
+        <h1 id="line3">BEAUTIFUL</h1>
+          <p id="line4">How long will your dreams have to wait,</p>
+        <h1 id="line5">&MEANINGFUL</h1>
+          <p id="line6">before you decide to follow them?</p>
+        <h1 id="line7">THINGS</h1>
+      </div>
+    </div>
+  </script>
+
+  <!-- About -->
+  <script type="text/x-handlebars" data-template-name="about">
+    <div class="about-template">
+      <h1 class="status-header">
+        <i class="icon-plus-sign-alt icon-2x"></i>
+        <span id="status-span1">Status:</span><span id="status-span2">{{status}}</span>
+      </h1>
+      <div class="bio">
+        <div id="headshot">
+          <img {{bind-attr src=headshot}} alt="headshot">
+        </div>
+        <div class="bio-intro">
+          <p>{{firstParagraph}}</p>
+          <p>{{secondParagraph}}</p>
+        </div>
+      </div>
+      <div class="skills">
+        <div id="code-icon">
+          <i class="icon-code icon-5x"></i>
+        </div>
+        <div class="skill-list">
+          <p>Rails</p>
+          <p>Ember</p>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>Ruby</p>
+          <p>Javascript</p>
+        </div>
+      </div>
+      <div class="contact-info">
+        <h2 class="contact-header">No Stalking.</h2>
+        <div class="icons-container">
+          <div class="contact-icon">
+            <a href="http://www.twitter.com/malchak"><i class="icon-twitter-sign icon-5x"></i></a>
+          </div>
+          <div class="contact-icon">
+            <a href="http://www.linkedin.com/pub/michael-malchak/2b/547/653/"><i class="icon-linkedin-sign icon-5x"></i></a>
+          </div>
+          <div class="contact-icon">
+            <a href="http://www.github.com/malchak"><i class="icon-github-sign icon-5x"></i></a>
+          </div>
+          <div class="contact-icon">
+            <a href="https://www.facebook.com/mmalchak"><i class="icon-facebook-sign icon-5x"></i></a>
+          </div>
+          <div class="contact-icon">
+            <a href="http://instagram.com/malchak"><i class="icon-instagram icon-5x"></i></a>
+          </div>
+          <div class="contact-icon">
+            <a href="https://plus.google.com/u/0/116891910820466021101"><i class="icon-google-plus-sign icon-5x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <!-- Tumblr Blog -->
+  <script type="text/x-handlebars" data-template-name="posts">
+    <div class="anchor">
+      {{#each post in model}}
+        <div class="blog-container">
+          <div class="entry">
+            <div class="date">
+              <p>{{format-date post.date}}</p>
+            </div>
+            <div class="text">
+              <div class="title">
+                <h3>{{post.title}}</h3>
+              </div>              
+              <div class="blog-body">
+                <p>{{{post.body}}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </script>
+  
+  <!-- Applicaton Dependencies -->
+  <script src="js/libs/jquery-1.9.1.js"></script>
+  <script src="js/libs/handlebars-1.0.0.js"></script>
+  <script src="js/libs/ember-1.0.0.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/controllers/application_controller.js"></script>
+  <script src="js/controllers/index_controller.js"></script>
+  <script src="js/controllers/about_controller.js"></script>
+  <script src="js/libs/moment-min.js"></script>
+  <script src="js/libs/moment-timezone.js"></script>
+  <script src="js/libs/moment-timezone-data.js"></script>
+  <script>moment().tz("America/Los_Angeles").format();</script>
+
+</body>
+</html>
